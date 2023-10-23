@@ -42,6 +42,23 @@
             $('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
         });
   </script>
+
+	<script>
+        // Check if the visitor count is stored in local storage
+        if (localStorage.getItem("visitorCount")) {
+            // If it exists, retrieve and increment the count
+            let count = parseInt(localStorage.getItem("visitorCount")) + 1;
+            localStorage.setItem("visitorCount", count);
+            document.getElementById("visitorCount").textContent = count;
+        } else {
+            // If it doesn't exist, set the count to 1 and store it in local storage
+            localStorage.setItem("visitorCount", 1);
+            document.getElementById("visitorCount").textContent = 1;
+        }
+    </script>
+
+
+
 </head>
 <body>
     <div class="nav">
