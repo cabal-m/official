@@ -1,4 +1,12 @@
- body {
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .nav {
+    padding: 10px;
+  }
+}
+body {
     margin: 0px;
     font-family: 'segoe ui';
 	background-image: url(../images/c.jpg);
